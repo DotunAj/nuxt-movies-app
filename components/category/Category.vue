@@ -4,7 +4,11 @@
     <div class="cat-sections">
       <ul>
         <li v-for="genre in genres" :key="genre.id" :class="selected(genre.id)">
-          <a @click="changeCategory(genre.id)" v-html="genre.name"></a>
+          <a
+            :id="genre.id"
+            @click="changeCategory(genre.id)"
+            v-html="genre.name"
+          ></a>
         </li>
       </ul>
     </div>

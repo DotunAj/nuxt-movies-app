@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Category it should render the correct content 1`] = `"<div class=\\"category\\"><h3>Browse by category</h3> <div class=\\"cat-sections\\"><ul><li class=\\"selected\\"><a id=\\"28\\">🔥 Action</a></li><li class=\\"\\"><a id=\\"12\\">👑 Adventure</a></li><li class=\\"\\"><a id=\\"14\\">🌟 Fantasy</a></li><li class=\\"\\"><a id=\\"10749\\">💖 Romance</a></li></ul></div> <categoryitem-stub name=\\"fade\\" catmovies=\\"[object Object],[object Object],[object Object]\\"></categoryitem-stub> <nuxt-link-stub to=\\"/genre/28\\" class=\\"cat__more-link\\">View More</nuxt-link-stub></div>"`;

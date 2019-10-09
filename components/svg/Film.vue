@@ -10,13 +10,7 @@
     viewBox="0 0 370.808 370.808"
     xml:space="preserve"
   >
-    <defs>
-      <style type="text/css">
-        .fil1 {
-          fill: white;
-        }
-      </style>
-    </defs>
+    <defs></defs>
     <g>
       <path
         class="fil1"
@@ -47,3 +41,9 @@
     </g>
   </svg>
 </template>
+
+<style scoped>
+.fil1 {
+  fill: white;
+}
+</style>

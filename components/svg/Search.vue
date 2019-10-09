@@ -14,13 +14,7 @@
     fill-rule="evenodd"
     clip-rule="evenodd"
   >
-    <defs>
-      <style type="text/css">
-        .fil0 {
-          fill: #090962;
-        }
-      </style>
-    </defs>
+    <defs></defs>
     <g>
       <path
         class="fil0"
@@ -29,3 +23,9 @@
     </g>
   </svg>
 </template>
+
+<style scoped>
+.fil0 {
+  fill: #090962;
+}
+</style>
