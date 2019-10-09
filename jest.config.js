@@ -10,10 +10,7 @@ module.exports = {
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest'
   },
-  // prettier-ignore
-  'collectCoverage': true,
-  // prettier-ignore
-  'collectCoverageFrom': [
-    '<rootDir>/components/**/*.vue',
-  ]
+  collectCoverage: true,
+  collectCoverageFrom: ['<rootDir>/components/**/*.vue'],
+  coverageReporters: ['lcov', 'text-summary']
 }
