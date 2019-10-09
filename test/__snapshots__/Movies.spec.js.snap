@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryItem it should render the correct content 1`] = `"<div class=\\"now-showing\\"><h3>Action</h3> <div class=\\"nw-movies\\"><div class=\\"nw-movie\\"><movie-item-stub movie=\\"[object Object]\\"></movie-item-stub></div><div class=\\"nw-movie\\"><movie-item-stub movie=\\"[object Object]\\"></movie-item-stub></div><div class=\\"nw-movie\\"><movie-item-stub movie=\\"[object Object]\\"></movie-item-stub></div></div></div>"`;

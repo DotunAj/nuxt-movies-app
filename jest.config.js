@@ -15,6 +15,5 @@ module.exports = {
   // prettier-ignore
   'collectCoverageFrom': [
     '<rootDir>/components/**/*.vue',
-    '<rootDir>/pages/**/*.vue'
   ]
 }
