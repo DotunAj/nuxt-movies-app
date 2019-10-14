@@ -30,7 +30,6 @@ export default {
     computedMovies() {
       const movies = this.moviesArray
       movies.map((movie) => {
-        movie.posterUrl = `${this.baseImageUrl}w500${movie.poster_path}`
         movie.posterUrl = `${this.baseImageUrl}/w500${movie.poster_path}`
         movie.releaseYear = movie.release_date.slice(0, 4)
         movie.genre = ''

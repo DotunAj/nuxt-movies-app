@@ -5,9 +5,11 @@
     </div>
 
     <div class="nw-description">
-      <p class="title">
-        {{ movie.original_title }}
-      </p>
+      <nuxt-link :to="'/movie/' + movie.id">
+        <p class="title">
+          {{ movie.original_title }}
+        </p>
+      </nuxt-link>
       <p class="genre">
         {{ movie.releaseYear }}
         <span>{{ movie.genre }}</span>
@@ -43,5 +45,10 @@ export default {
 <style scoped>
 span {
   display: inline-block;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 </style>
