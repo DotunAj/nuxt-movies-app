@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie it should render the correct content 1`] = `
+"<section class=\\"right-section\\"><div class=\\"mv-description\\"><h3>A new Hope</h3> <p class=\\"mv-genre\\">Action</p> <div class=\\"foo\\"><p class=\\"mv-rating\\">
+        🔥
+        7<span>500</span></p> <p class=\\"mv-year\\"><span>2019</span>170min
+      </p></div></div> <div class=\\"mv-synopsis\\"><p>
+      lorem ipsum yada yada yada
+    </p></div> <div class=\\"mv-images\\"><div class=\\"mv-image image-1\\"><img alt=\\"ps-1\\" src=\\"mybackdrop.com/image1\\"></div> <div class=\\"mv-image image-2\\"><img src=\\"img.jpg\\" alt=\\"ps-1\\"></div> <div class=\\"mv-image image-3\\"><img src=\\"img.jpg\\" alt=\\"ps-1\\"></div> <div class=\\"mv-image image-4\\"><img src=\\"img.jpg\\" alt=\\"ps-1\\"></div></div></section>"
+`;

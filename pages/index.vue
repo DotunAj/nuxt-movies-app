@@ -50,7 +50,9 @@ export default {
       if (this.loading === false) {
         computed = this.catMovies.slice(0, 5)
         computed.map((movie) => {
-          movie.backdropUrl = `${this.baseImageUrl}/w500${movie.backdrop_path}`
+          if (movie.backdrop_path) {
+            movie.backdropUrl = `${this.baseImageUrl}/w500${movie.backdrop_path}`
+          }
         })
         return computed
       }

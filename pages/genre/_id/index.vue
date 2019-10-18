@@ -1,6 +1,15 @@
 <template>
   <section class="left-section">
-    <Movies :movies="computedMovies" :title="title" />
+    <Movies
+      v-if="computedMovies.length"
+      :movies="computedMovies"
+      :title="title"
+    />
+
+    <div v-else>
+      <h3>Oppppppsssss....Genre not found</h3>
+      <nuxt-link to="/">>Go back Home</nuxt-link>
+    </div>
   </section>
 </template>
 
@@ -78,3 +87,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+a {
+  color: #fff;
+  text-decoration: none;
+}
+</style>

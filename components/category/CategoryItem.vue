@@ -5,10 +5,15 @@
       :key="movie.id"
       class="cat-movie"
       :style="
-        `background-image: linear-gradient(rgba(0,0,0, 0.04),rgba(0,0,0, 0.2),rgba(0,0,0, 0.2),rgba(0,0,0, 0.95)), url(${movie.backdropUrl});background-size: cover;`
+        `background-image: linear-gradient(rgba(0,0,0, 0.04),rgba(0,0,0, 0.2),rgba(0,0,0, 0.2),rgba(0,0,0, 0.95)), url(${movie.backdropUrl ||
+          '/noimage.png'});background-size: cover;`
       "
     >
-      <h3>{{ movie.original_title }}</h3>
+      <h3>
+        <nuxt-link :to="'/movie/' + movie.id">{{
+          movie.original_title
+        }}</nuxt-link>
+      </h3>
     </div>
   </div>
 </template>
@@ -25,6 +30,10 @@ export default {
 </script>
 
 <style scoped>
+.cat-movie a {
+  color: #fff;
+  text-decoration: none;
+}
 .cat-sections a {
   cursor: pointer;
 }

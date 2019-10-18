@@ -24,13 +24,28 @@
         <img :src="movie.posterUrl" alt="ps-1" />
       </div>
       <div class="mv-image image-2">
-        <img :src="backdrops[1].backdropUrl" alt="ps-1" />
+        <img
+          v-if="backdrops[1] !== undefined"
+          :src="backdrops[1].backdropUrl"
+          alt="ps-1"
+        />
+        <img v-else src="/noimage.png" alt="ps-1" />
       </div>
       <div class="mv-image image-3">
-        <img :src="backdrops[2].backdropUrl" alt="ps-1" />
+        <img
+          v-if="backdrops[2] !== undefined"
+          :src="backdrops[2].backdropUrl"
+          alt="ps-1"
+        />
+        <img v-else src="/noimage.png" alt="ps-1" />
       </div>
       <div class="mv-image image-4">
-        <img :src="backdrops[3].backdropUrl" alt="ps-1" />
+        <img
+          v-if="backdrops[3] !== undefined"
+          :src="backdrops[3].backdropUrl"
+          alt="ps-1"
+        />
+        <img v-else src="/noimage.png" alt="ps-1" />
       </div>
     </div>
   </section>
@@ -41,11 +56,15 @@ export default {
   props: {
     movie: {
       type: Object,
-      default: () => {}
+      default: () => {
+        return {}
+      }
     },
     backdrops: {
       type: Array,
-      default: () => {}
+      default: () => {
+        return []
+      }
     }
   }
 }
