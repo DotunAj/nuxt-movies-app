@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/DotunAj/nuxt-movies-app.svg?branch=master)](https://travis-ci.org/DotunAj/nuxt-movies-app)
+
 # nuxt-movies-app
 
 > A movie listing app
