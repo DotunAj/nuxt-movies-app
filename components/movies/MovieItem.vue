@@ -1,7 +1,10 @@
 <template>
   <div>
     <div class="image">
-      <img :src="movie.posterUrl" :alt="movie.original_title" />
+      <img
+        :src="movie.posterUrl || '/noposter.svg'"
+        :alt="movie.original_title"
+      />
     </div>
 
     <div class="nw-description">

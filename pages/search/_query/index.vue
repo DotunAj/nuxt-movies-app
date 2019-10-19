@@ -3,11 +3,11 @@
     <Movies
       v-if="computedMovies.length"
       :movies="computedMovies"
-      :title="title"
+      :title="'Search Result for: ' + search"
     />
 
     <div v-else>
-      <h3>Oppppppsssss....Genre not found</h3>
+      <h3>Oppppppsssss....No movie found with that name</h3>
       <nuxt-link to="/">>Go back Home</nuxt-link>
     </div>
   </section>
@@ -15,27 +15,18 @@
 
 <script>
 import axios from 'axios'
-import Movies from '~/components/movies/Movies'
+import Movies from '@/components/movies/Movies'
 export default {
   components: {
     Movies
   },
   data() {
     return {
+      genres: {},
       baseImageUrl: ''
     }
   },
   computed: {
-    title() {
-      let name = ''
-      this.$store.state.genreList.map((genre) => {
-        if (genre.id === parseInt(this.$route.params.id)) {
-          name = genre.name
-        }
-      })
-
-      return name
-    },
     computedMovies() {
       const movies = this.moviesArray
       movies.map((movie) => {
@@ -60,10 +51,10 @@ export default {
   },
   async asyncData({ params }) {
     const movies = await axios.get(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.apiKey}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${params.id}`
+      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.apiKey}&language=en-US&query=${params.query}&page=1&include_adult=false`
     )
 
-    return { moviesArray: movies.data.results }
+    return { moviesArray: movies.data.results, search: params.query }
   },
   created() {
     this.getBaseImageUrl()

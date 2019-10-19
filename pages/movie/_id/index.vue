@@ -22,7 +22,9 @@ export default {
     computedMovie() {
       const movie = this.movieObject
       if (movie) {
-        movie.posterUrl = `${this.baseImageUrl}/w500${movie.poster_path}`
+        if (movie.poster_path) {
+          movie.posterUrl = `${this.baseImageUrl}/w500${movie.poster_path}`
+        }
         movie.releaseYear = movie.release_date.slice(0, 4)
         movie.genre = ''
         movie.genres.map((genre, index) => {
