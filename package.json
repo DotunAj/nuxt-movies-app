@@ -17,6 +17,9 @@
     "cookie-universal-nuxt": "^2.0.18",
     "nuxt": "^2.0.0"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.6.3",
